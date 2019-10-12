@@ -58,12 +58,13 @@ app.get('/', (req, res) => {
   res.render('index', { title: 'My Express App' })
 })
 
-/**Middleware will execute on login get route */
+/**Middleware will execute on 'login' get route */
 app.get('/login', (req, res) => {
   res.render('login')
 })
 
-app.po
+/**Middleware for 'register' get route */
+app.get()
 
 const port = process.env.port || 3000; //port on which server will run
 
