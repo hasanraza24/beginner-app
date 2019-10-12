@@ -9,7 +9,22 @@ const http = require('http')
  */
 const express = require('express')
 const path = require('path')
+/**
+ * Mongoose is a MongoDB object modeling tool, it helps as to connect database and
+ * design data model.
+ */
 const mongoose = require('mongoose')
+/**
+ * To connect with this you must have MongoDB installed in your local system and running on
+ * port 27107
+ */
+mongoose.connect('http://localhost:27017/beginner-app', { useNewUrlParser: true }, (e)=> {
+  if(e) {
+    console.log('Error while conneting to database', e)
+  }else {
+    console.log('Database connected')
+  }
+})
 /**
  * Creating express app by calling this function, The express() function is a top-level
  * function exported by the express module. 
